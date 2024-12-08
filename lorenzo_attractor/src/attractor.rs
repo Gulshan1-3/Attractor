@@ -16,7 +16,7 @@ pub fn lorenz_test_values() -> Attractors {
     }
 }
 
-fn solution (position:transform,constants:attractors) -> Vec3  {
+fn lorenz_solution (position:transform,constants:attractors) -> Vec3  {
     let Vec3{x,y,z} = position.translation;
     let dx =  x + constants.t * constants.a * (y-x);
     let dy =  y + constants.t * (x*(constants.b - z)- y);
